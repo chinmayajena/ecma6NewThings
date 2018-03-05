@@ -89,5 +89,14 @@ and age is ${age}`);
 
 
     // Generators
+    
+    function* generator() {
+        //Without yield all the lines will be logged. But with yield the next() function makes each line to be logged.
+        yield console.log("I am banana");
+        yield console.log("I am papaya");
+        yield console.log("I am orange");
+    }
+    var myGenerator = generator();
+    myGenerator.next();
 
 }
