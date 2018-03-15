@@ -16,7 +16,25 @@
         <li> 3</li>
         <li> 4</li>
     </ul>
+  
+  <div>
+    <h3> For Event Bubbling </h3> 
+	<button id="myButton" class="float-left submit-button" ><div id="myDiv">Hello</div></button>
+
+
+</div>
 
 </body>
+  
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+         alert("I am button!");
+    };
+     document.getElementById("myDiv").onclick = function () {
+     	//event.preventDefault();
+     	event.stopPropagation();
+          alert("I am div!");
+    };
+</script>
 
 </html>
